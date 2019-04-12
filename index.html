@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script>
+var welcome;
+var date = new Date();
+var hour = date.getHours();
+var minute = date.getMinutes();
+var second = date.getSeconds();
+
+if (minute < 10) {
+
+minute = "0" + minute;
+
+    }
+
+if (second < 10) {
+second = "0" + second;
+
+    }
+
+if (hour < 12) {
+
+welcome = "Good Morning!";
+
+    }
+
+else if (hour < 17) {
+welcome = "Good Afternoon!";
+
+    }
+else {
+welcome = "Good Evening!";
+
+    }
+
+    document.write("<h1>" + welcome + "</font>");
+
+    document.write("<br>" + hour + ":" + minute + ":" + second);
+
+            
+            
+        
+			function findCelsius(){
+				var fahrenheit = document.getElementById("fahrenheit").value;
+				var celsius;
+				if(fahrenheit != ''){
+					celsius = (fahrenheit - 32) * 5/9;
+					document.getElementById("output").innerHTML = celsius;
+				}else{
+					document.getElementById("output").innerHTML = "Please enter a value!";
+				}
+			}
+		
+		</script>
+	</head>
+	<body>
+ <h6>Priya Maharban Assignment One<h6>
+		<h2>Enter Fahrenheit</h2>
+		<input type="text" id="fahrenheit" />
+		<button onclick="findCelsius()" >Convert To Celsius</button>
+ 
+		<h4>Output: <span id="output"></span></h4>
+	</body>
+</html>
